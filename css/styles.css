@@ -214,6 +214,200 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     background-color: #188CE8;
 }
 
+/* ------Модалка------ */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    width: 100%;
+    height: 100%;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)  scale(1);
+    padding: 40px;
+    
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background-color: var(--color-white);
+
+    width: 528px;
+    height: 581px;
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.modal__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    
+    padding: 0;
+}
+
+.modal__close:hover,
+.modal__close:focus {
+    fill: var(--color-blue);
+}
+
+.modal__title {
+    color: var(--color-black);
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    margin-bottom: 12px
+}
+
+.form__label {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.form__label:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 0 12px;
+}
+
+.form__msg-area {
+    margin-bottom: 20px;
+}
+
+.form__input-title {
+    display: block;
+
+    color: var(--color-grey);
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+        
+    margin-bottom: 4px;
+}
+
+.form__input,
+.form__msg {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    caret-color: var(--color-blue);
+
+    width: 100%;
+}
+
+.form__input {
+    height: 40px;
+    padding: 0 12px 0 40px;
+}
+
+.form__msg {
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+}
+
+.form__input:focus,
+.form__msg:focus,
+.form__input:focus + .form__icon {
+    outline: none;
+    border-color: var(--color-blue);
+    fill: var(--color-blue);
+}
+
+.form__msg::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+        
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+}
+
+.form__icon {
+    position: absolute;
+    top: 29px;
+    left: 12px;
+}
+
+.form__user-policy {
+    position: absolute;
+}
+
+.form__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    fill:var(--color-white);
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--color-black);
+    border-radius: 2px;
+}
+
+.form__user-policy:checked + .form__checkbox {
+    border-color: var(--color-blue);
+    background-color: var(--color-blue);          
+}
+
+.form__policy-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.form__policy-conditions {
+    position: relative;
+    color: var(--color-blue);
+}
+
+.form__policy-conditions::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+}
+
+.modal__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
 /* ------Преимущества------ */
 .section {
     padding: 94px 0;
