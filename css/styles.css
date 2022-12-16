@@ -10,6 +10,9 @@
     --icon-color: #AFB1B8;
 
     --margin-gap: 30px;
+
+    --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration: 250ms;
 }
 
 /* Подключение основного и альтернативного шрифтов, цвета текста */
@@ -104,6 +107,10 @@ button {
     display: flex;
 }
 
+.nav-item {
+    position: relative;
+}
+
 .nav-item:not(:last-child),
 .contacts-item:not(:last-child){
     margin-right: 50px;
@@ -125,7 +132,21 @@ button {
     letter-spacing: 0.02em;
 
     padding: 32px 0;
+
+    transition: color var(--duration) var(--cubic);
 }
+
+.nav-link--current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-blue);
+    border-radius: 2px;
+} 
 
 .contacts-link {
     color: var(--color-grey);
@@ -137,6 +158,8 @@ button {
 .icon-smartphone {
     margin-right: 10px;
     fill: var(--color-grey);
+
+    transition: fill var(--duration) var(--cubic);
 }
 
 /* Ховер и фокус на ссылки хедера и футера */
@@ -207,6 +230,8 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     height: 50px;
     border-radius: 4px;
     border: none;
+
+    transition: background-color var(--duration) var(--cubic);
 }
 
 .button:hover,
@@ -423,6 +448,8 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     height: 120px;
     margin-bottom: var(--margin-gap);
     border-radius: 4px;
+
+    transition: box-shadow var(--duration) var(--cubic);
 }
 
 .benefits-list {
@@ -432,10 +459,15 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 
 .benefits-item {
     flex-basis: calc((100% - 3 * var(--margin-gap)) / 4);
+
 }
 
 .benefits-item:not(:last-child) {
     margin-right: var(--margin-gap);
+}
+
+.benefits-item:hover .benefits-thumb {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .benefits-title {
@@ -565,6 +597,10 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     align-items: center;
     border-radius: 50%;
     fill: var(--icon-color);
+
+    transition: 
+        background-color var(--duration) var(--cubic), 
+        fill var(--duration) var(--cubic);
 }
 
 .member-link:hover, 
@@ -599,6 +635,8 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     display: flex;  
     justify-content: center;
     align-items: center;
+
+    transition: fill var(--duration) var(--cubic), border-color var(--duration) var(--cubic);
 }
 
 .clients-link:hover,
@@ -648,6 +686,8 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 
     margin-right: 12px;
     padding: 15px;
+
+    transition: border-color var(--duration) var(--cubic);
 }
 
 .footer-form-input:focus {
@@ -684,6 +724,8 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+
+    transition: color var(--duration) var(--cubic);
 }
 
 /* Прозрачность элементов футера */
@@ -724,6 +766,8 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     fill: var(--color-white);
+
+    transition: background-color var(--duration) var(--cubic);
 }
 
 .footer-link:hover, 
@@ -758,6 +802,11 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     padding: 6px 22px;
     border-radius: 4px;
     border: none;
+
+    transition: 
+        background-color var(--duration) var(--cubic), 
+        color var(--duration) var(--cubic),
+        box-shadow var(--duration) var(--cubic);
 }
 
 .filter-button:hover,
@@ -775,14 +824,50 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     margin-bottom: calc(-1 * var(--margin-gap));
 }
 
+.portfolio-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
 .portfolio-item {
     margin-right: var(--margin-gap);
     margin-bottom: var(--margin-gap);
     flex-basis: calc(100% / 3 - var(--margin-gap));
 }
 
+.portfolio-item__description {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(33, 150, 243, 0.9);
+    color: var(--color-white);
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+
+    padding: 64px 24px;
+    width: 370px;
+    height: 294px;
+
+    transform: translateY(100%);
+
+    transition: transform var(--duration) var(--cubic);
+}
+
+.portfolio-item:hover .portfolio-item__description,
+.portfolio-item:focus .portfolio-item__description {
+    transform: translateY(0);
+}
+
 .portfolio-link {
     display: block;
+
+    transition: box-shadow var(--duration) var(--cubic);
 }
 
 .portfolio-link:hover,
@@ -811,5 +896,23 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
+}
 
+/* ------КОНТАКТЫ------ */
+.contacts-title {
+    color: var(--color-black);
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    margin-bottom: 50px;
+}
+
+.contacts-map {
+    display: inline-block;
+    border: 1px solid var(--color-black);
 }
