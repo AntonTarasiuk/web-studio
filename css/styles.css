@@ -913,6 +913,14 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 }
 
 /* ------КОНТАКТЫ------ */
+.contacts {
+    background-color: var(--background-color-grey);
+}
+
+.contacts.section {
+    padding: 50px 0;
+}
+
 .contacts-title {
     color: var(--color-black);
 
@@ -926,7 +934,45 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     margin-bottom: 50px;
 }
 
+.contacts-data {
+    display: flex;
+
+}
+
 .contacts-map {
     display: inline-block;
+    margin: 0 0 0 auto;
     border: 1px solid var(--color-black);
+}
+
+.contacts__list {
+    display: inline-block;
+
+    color: var(--color-black);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    /* margin-right: auto; */
+}
+
+.contacts__item-title {
+    /* display: inline; */
+
+    color: var(--color-grey);
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+}
+
+.contacts__item {
+    margin: 0;
+}
+
+.contacts__item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.contacts__link {
+    color: inherit;
 }
