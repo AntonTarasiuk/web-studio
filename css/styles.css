@@ -1,5 +1,5 @@
 /* Объявление переменных цветов страницы */
-:root {
+/* :root {
     --color-blue: #2196F3;
     --color-grey: #757575;
     --color-black: #212121;
@@ -14,18 +14,18 @@
 
     --cubic: cubic-bezier(0.4, 0, 0.2, 1);
     --duration: 250ms;
-}
+} */
 
 /* Подключение основного и альтернативного шрифтов, цвета текста */
-body {
+/* body {
     color: var(--color-grey);
     background-color: var(--color-white);
 
     font-family: Roboto, sans-serif;
-}
+} */
 
 /* Переопредиление значений по умолчанию */
-ul {
+/* ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -52,11 +52,11 @@ a {
 
 button {
     cursor: pointer;
-}
+} */
    
 
 /* Стилизация контейнера */
-.conteiner {
+/* .conteiner {
     width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
@@ -68,21 +68,21 @@ button {
     width: 1px;
     height: 1px;
     margin: -1px;
-}
+} */
 
 /* ХЕДЕР */
-.header {
+/* .header {
     border-bottom: 1px solid #ECECEC;
-}
+} */
 
 /* Элементы хедера в ряд */
-.header .conteiner {
+/* .header .conteiner {
     align-items: center;
     display: flex;
-}
+} */
 
 /* Стилизация лого */
-.logo {
+/* .logo {
     color: var(--color-logo);
     font-family: Raleway, sans-serif;
     font-weight: 700;
@@ -106,10 +106,10 @@ button {
     color: var(--color-white);
     display: block;
     margin-bottom: 20px;
-}
+} */
 
 /* Стилизация навигации*/
-.nav__list, 
+/* .nav__list, 
 .contacts__list {
     display: flex;
 }
@@ -167,29 +167,29 @@ button {
     fill: var(--color-grey);
 
     transition: fill var(--duration) var(--cubic);
-}
+} */
 
 /* Ховер и фокус на ссылки хедера и футера */
-.nav__link:hover,
+/* .nav__link:hover,
 .nav__link:focus,
 .contacts__link:hover,
-.contacts__link:focus,
+.contacts__link:focus, */
 .address__link:hover,
 .address__link:focus {
     color: var(--color-blue);
 }
 
-.contacts__link:hover .icon-envelope,
+/* .contacts__link:hover .icon-envelope,
 .contacts__link:hover .icon-smartphone, 
 .contacts__link:focus .icon-envelope,
 .contacts__link:focus .icon-smartphone {
     fill: var(--color-blue);
-}
+} */
 
 /* СТУДИЯ */
 
 /* ------Герой------ */
-.hero {
+/* .hero {
     background-color: var(--footer-color);
     background-image: linear-gradient(to right, 
 rgba(47, 48, 58, 0.4), 
@@ -220,9 +220,9 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 
     width: 696px;
     margin-bottom: 30px;
-}
+} */
 
-.button{
+/* .button{
     background-color: var(--color-blue);
     color: var(--color-white);
 
@@ -244,10 +244,10 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 .button:hover,
 .button:focus {
     background-color: var(--button-hover);
-}
+} */
 
 /* ------Модалка------ */
-.backdrop {
+/* .backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -456,10 +456,10 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     margin: 0 auto;
-}
+} */
 
 /* ------Преимущества------ */
-.section {
+/* .section {
     padding: 94px 0;
 }
 
@@ -515,10 +515,10 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 
 .benefits.section {
     padding-bottom: 0;
-}
+} */
 
 /* ------Чем мы занимаемся------ */
-.work .conteiner {
+/* .work .conteiner {
     flex-direction: column;
     align-items: center;
 }
@@ -551,11 +551,11 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     display: block;
     height: auto;
     flex-basis: calc((100% - 2 * var(--margin-gap)) / 3);
-}
+} */
 
 
 /* ------Наша команда------ */
-.team {
+/* .team {
     background-color:var(--background-color-grey);
 }
 
@@ -632,11 +632,10 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 .team-member__link:focus {
     background-color: var(--color-blue);
     fill: var(--color-white);
-
-}
+} */
 
 /* Постоянные клиенты */
-.clients__list {
+/* .clients__list {
     display: flex;
 }
 
@@ -668,10 +667,10 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 .clients__link:focus {
     border-color: var(--color-blue);
     fill: var(--color-blue);
-}
+} */
 
 /* ФУТЕР */
-.footer {
+/* .footer {
     background-color: var(--footer-color);
     padding: 60px 0;
 }
@@ -748,7 +747,7 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 }
 
 /* Прозрачность элементов футера */
-.address__link--transparent { 
+/* .address__link--transparent { 
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -792,12 +791,12 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 .footer__link:hover, 
 .footer__link:focus {
     background-color: var(--color-blue);
-}
+} */ */
 
 /* ПОРТФОЛИО */
 
 /* ------Список фильтров------ */
-.filter__list {
+/* .filter__list {
     display: flex;
     justify-content: center;
 
@@ -833,10 +832,10 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     background-color: var(--color-blue);
     color: var(--color-white);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+} */
 
 /* ------Контент фильтра------ */
-.portfolio__list {
+/* .portfolio__list {
     display: flex;
     flex-wrap: wrap;
     margin-right: calc(-1 * var(--margin-gap));
@@ -915,10 +914,10 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
-}
+} */
 
 /* ------КОНТАКТЫ------ */
-.contacts {
+/* .contacts {
     background-color: var(--background-color-grey);
 }
 
@@ -976,10 +975,10 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 
 .contact__link {
     color: inherit;
-}
+} */
 
 /* ------Кнопка ВВЕРХ------ */
-#up-button {
+/* #up-button {
     width: 60px;
     height: 60px;
     display: none; 
@@ -1000,4 +999,4 @@ rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
   
   #up-button:hover {
     fill: var(--button-hover);
-  }
+  } */

@@ -1,0 +1,29 @@
+body {
+    color: var(--color-grey);
+    background-color: var(--color-white);
+
+    font-family: Roboto, sans-serif;
+}
+
+/* Значения по умолчанию */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Скрытие елементов DOM */
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}

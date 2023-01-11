@@ -1,0 +1,21 @@
+/* Объявление переменных цветов страницы */
+:root {
+    --color-blue: #2196F3;
+    --color-grey: #757575;
+    --color-black: #212121;
+    --color-logo: #000;
+    --color-white: #fff;
+    --background-color-grey: #F5F4FA;
+    --footer-color: #2F303A;
+    --icon-color: #AFB1B8;
+    --button-hover: #188CE8;
+
+    --margin-gap: 30px;
+
+    --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration: 250ms;
+}
+
+/* Объявление переменных шрифта */
+$font-family-primary: Roboto, sans-serif;
+$font-family-secondary: Raleway, sans-serif;

@@ -1,0 +1,22 @@
+/* ------Кнопка ВВЕРХ------ */
+#up-button {
+    width: 60px;
+    height: 60px;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 10;
+    outline: none;
+    fill: var(--color-blue);
+    background-color: transparent;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+
+    transition: background-color var(--duration) var(--cubic);
+
+    &:hover {
+        fill: var(--button-hover);
+    }
+}

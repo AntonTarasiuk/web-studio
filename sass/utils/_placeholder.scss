@@ -1,0 +1,32 @@
+%font {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    padding: 32px 0;
+
+    transition: color var(--duration) var(--cubic);
+}
+
+%form__input-and-msg {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    caret-color: var(--color-blue);
+
+    width: 100%;
+
+    transition: border-color var(--duration) var(--cubic);
+}
+
+%flex__display-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex__display-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

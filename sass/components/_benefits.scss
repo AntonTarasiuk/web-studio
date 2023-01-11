@@ -1,0 +1,47 @@
+/* ------Преимущества------ */
+.benefits__thumb {
+    @extend %flex__display-center;
+
+    background-color: var(--background-color-grey);
+    width: 270px;
+    height: 120px;
+    margin-bottom: var(--margin-gap);
+    border-radius: 4px;
+
+    transition: box-shadow var(--duration) var(--cubic);
+
+    .benefits__item:hover & {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;  
+    }
+}
+
+.benefits__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.benefits__item {
+    flex-basis: calc((100% - 3 * var(--margin-gap)) / 4);
+
+    &:not(:last-child) {
+        margin-right: var(--margin-gap);
+    }
+}
+
+.benefits__title {
+    color: var(--color-black);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+.benefits__description {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
