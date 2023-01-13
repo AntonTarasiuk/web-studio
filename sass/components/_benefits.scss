@@ -1,31 +1,62 @@
 /* ------Преимущества------ */
 .benefits__thumb {
     @extend %flex__display-center;
-
-    background-color: var(--background-color-grey);
-    width: 270px;
+    
+    width: 450px;
     height: 120px;
+    background-color: var(--background-color-grey);
     margin-bottom: var(--margin-gap);
     border-radius: 4px;
-
+    
     transition: box-shadow var(--duration) var(--cubic);
-
+    
     .benefits__item:hover & {
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;  
     }
+
+    @media screen and (min-width: 768px) {
+        width: 354px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+    }
 }
 
-.benefits__list {
-    display: flex;
-    flex-wrap: wrap;
+.benefits__list {    
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .benefits__item {
-    flex-basis: calc((100% - 3 * var(--margin-gap)) / 4);
 
     &:not(:last-child) {
-        margin-right: var(--margin-gap);
+        margin-bottom: var(--margin-gap);
     }
+
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - var(--margin-gap)) / 2);
+
+        &:nth-child(2n+1) {
+            margin-right: var(--margin-gap);
+        }
+
+        &:nth-last-child(-n+2) {
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 3 * var(--margin-gap)) / 4);
+    
+        &:not(:last-child) {
+            margin-right: var(--margin-gap);
+        }
+    }
+
 }
 
 .benefits__title {
@@ -35,9 +66,14 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    text-align: center;
     text-transform: uppercase;
 
     margin-bottom: 10px;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
 }
 
 .benefits__description {

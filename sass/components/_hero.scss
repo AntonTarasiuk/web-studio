@@ -1,20 +1,51 @@
 /* ------Герой------ */
 .hero {
     background-color: var(--footer-color);
+    padding: 200px 0;
+    max-width: 100%;
+    margin: 0 auto;
     background-image: linear-gradient(to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url(../images/hero-mobile.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 200px 0;
-    max-width: 1600px;
-    margin: 0 auto;
+    
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url(../images/hero-mobile@2x.jpg);
+    }
 
-    & .conteiner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url(../images/hero-tablet.jpg);
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)), url(../images/hero-tablet@2x.jpg);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 200px 0;
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)), url(../images/hero@2x.jpg);
+        }
     }
 }
 
@@ -22,12 +53,19 @@
     color: var(--color-white);
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
-    width: 696px;
     margin-bottom: 30px;
+    width: 360px;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 44px;
+        line-height: 1.36;
+
+        width: 696px;
+    }
 }

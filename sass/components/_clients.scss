@@ -1,11 +1,15 @@
 /* Постоянные клиенты */
 .clients__list {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .clients__item {
-    flex-basis: calc((100% - 5 * var(--margin-gap)) / 6);
-    height: 92px;
+    
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 5 * var(--margin-gap)) / 6);
+        height: 92px;
+    }
 
     &:not(:last-child) {
         margin-right: var(--margin-gap);

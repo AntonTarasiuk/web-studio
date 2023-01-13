@@ -1,9 +1,5 @@
 /* ХЕДЕР */
 .header {
     border-bottom: 1px solid #ECECEC;
-
-    & .conteiner {
-        align-items: center;
-        display: flex;
-    }
+    position: relative;
 }
