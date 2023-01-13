@@ -21,3 +21,40 @@
         background-color: var(--button-hover);
     }
 }
+
+// Кнопка мобильного меню
+.burger-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    z-index: 5;
+
+    @include transition (fill);
+
+    &:hover {
+        fill: var(--color-blue);
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.burger-button .burger-button__close {
+    display: none;
+}
+
+.burger-button.is-open .burger-button__menu {
+    display: none;
+}
+
+.burger-button.is-open .burger-button__close {
+    display: block;
+}

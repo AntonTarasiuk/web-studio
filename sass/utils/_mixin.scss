@@ -1,0 +1,4 @@
+// Анимация
+@mixin transition ($transition, $duration: var(--duration), $cubic: var(--cubic)) {
+    transition: $transition $duration $cubic;
+}

@@ -67,6 +67,11 @@
     letter-spacing: 0.03em;
 
     transition: color var(--duration) var(--cubic);
+
+    &:hover,
+    &:focus {
+        color: var(--color-blue);
+    }
 }
 
 /* Прозрачность элементов футера */
