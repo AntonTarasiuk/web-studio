@@ -17,6 +17,6 @@
     transition: background-color var(--duration) var(--cubic);
 
     &:hover {
-        fill: var(--button-hover);
+        fill: var(--hover-color);
     }
 }

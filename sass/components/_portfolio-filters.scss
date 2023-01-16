@@ -2,13 +2,31 @@
 
 /* ------Список фильтров------ */
 .filter__list {
-    @extend %flex__display-center;
-
+    // @extend %flex__display-center;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    
     margin-bottom: 50px;
+    
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+    }
 }
 
-.filter__item:not(:last-child) {
-    margin-right: 8px;
+.filter__item {
+    &:not(:last-child) {
+        margin-right: 8px;
+        
+    }
+
+    &:nth-last-child(-n + 2) {
+        margin-top: 8px;
+
+        @media screen and (min-width: 768px) {
+            margin-top: 0;
+        }
+    }
 }
 
 .filter__button {
