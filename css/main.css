@@ -1257,6 +1257,14 @@ p {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (min-width: 1200px) {
+  .footer__form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 
 .footer__form-input {
   background-color: transparent;
@@ -1487,30 +1495,63 @@ p {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .contacts__title {
+    margin-bottom: 50px;
+  }
 }
 
 .contacts__data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-
-.contacts__map {
-  display: inline-block;
-  margin: 0 0 0 auto;
-  border: 1px solid var(--color-black);
-  width: 800px;
-  height: 400px;
+@media screen and (min-width: 768px) {
+  .contacts__data {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
 }
 
 .contacts__info {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 0 20px 0;
   color: var(--color-black);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+}
+@media screen and (min-width: 768px) {
+  .contacts__info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 0;
+  }
 }
 
 .contact__title {
@@ -1529,4 +1570,21 @@ p {
 
 .contact__link {
   color: inherit;
+}
+
+.contacts__map {
+  border: 1px solid var(--color-black);
+  height: 400px;
+}
+@media screen and (min-width: 768px) {
+  .contacts__map {
+    width: 450px;
+    margin-left: auto;
+    height: 350px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__map {
+    width: 800px;
+  }
 }/*# sourceMappingURL=main.css.map */
